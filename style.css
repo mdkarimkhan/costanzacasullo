@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root{
+    --light-orange-gradient: rgba(254, 234, 211, 0.6);
+    --beetroot: #7f0d0d;
+    --light-green-gradient: rgba(220,239,210, 0.6);
+    --box-shadow:  0 0 20px rgba(0, 0, 0, 0.1);
+
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background: url("media/veget\ background.webp");
+    background-position: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    color: var(--beetroot);
+}
+
+.navbar{
+    background-color: var(--beetroot);
+   
+    
+        position: sticky;
+        top: 0;
+        z-index: 2;
+     
+}
+
+.logo{
+  width: 6em;
+  background-color:#ffffff;
+}
+
+.slider-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: var(--light-orange-gradient);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+ 
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 2rem;
+  }
+/* The images of the slider and about section smaller on desktop */
+  @media only screen and (min-width: 1024px) {
+
+    .slide img{
+        width: 20%;
+    }
+
+    .about img{
+        width: 50%;
+    }
+  }
+
+ .product{
+    overflow: hidden;
+    position: relative;
+    background: var(--light-green-gradient);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+ }
+
+ .slideshow-btn{
+    border-color: var(--beetroot);
+    background-color: var(--beetroot);
+ }
+
+ .slideshow-btn:hover{
+    background-color: #9a0e0e;
+ }
+
+ /* Refers to the effect of the order button (not in the slider 
+ everywhere else) that when you hover it, a shopping cart appears */ 
+  .effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    
+    width: 150px;
+    overflow: hidden;
+    background-color: var(--beetroot);
+  }
+  
+  
+  .effect.effect-1 {
+    transition: all 0.2s linear 0s;
+  }
+  
+  .effect.effect-1:before {
+    content: "\f07a";
+    font-family: FontAwesome;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    transform: scale(0,1);
+    transition: all 0.2s linear 0s;
+  }
+  
+  .effect.effect-1:hover {
+    text-indent: -9999px;
+  }
+  
+  .effect.effect-1:hover:before {
+    transform: scale(1,1);
+    text-indent: 0;
+  }
+
+  .icon{
+    width: 30px;
+    padding: 0.5em;
+  }
+ 
+ .about-section{
+    background: var(--light-orange-gradient);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+ 
+  box-shadow: var(--box-shadow);
+ }
+
+  .about-section img {
+    max-width: 100%;
+  }
+
+  .about-section p{
+    line-height: 2em;
+  }
+/* About section looking different on mobile */
+  @media screen and (min-width: 768px) {
+    .about-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .about-section .text {
+      flex: 1;
+      padding: 0 2rem;
+    }
+  }
+
+  .accordion__item input:not(:checked) ~ .accordion__content {
+    display: none;
+  }
+
+  .accordion{
+    overflow: hidden;
+    position: relative;
+    background: var(--light-green-gradient);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+ 
+  box-shadow: var(--box-shadow);  }
+
+  @media screen and (max-width: 600px) {
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery img {
+      margin: 10px 0;
+    }
+  }
+
+  @media screen and (min-width: 601px) {
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      margin: 10px;
+      width: calc(33.33% - 20px); /* Distribute equally with margins */
+      max-width: 100%;
+    }
+  }
+
+  .gallery img{object-fit: cover;}
+
+  .contact-section {
+display: flex;
+align-items: center;
+justify-content: center;
+ }
+
+
+  
+  .contact-form {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    
+    
+  }
+  
+
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn{
+    background-color: var(--beetroot);
+    color: white;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .submit-btn:hover{
+    transform: scale(0.9);
+    background-color: #9a0e0e;;
+  }
+
+.contact p:hover{
+    color: var(--beetroot);
+}
+
+  .social-icon:hover{
+    transform: translateY(-5px);
+  }
+
+  footer a:hover{
+    color: var(--beetroot);
+  }
+
+ 
