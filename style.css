@@ -3,6 +3,7 @@
 :root{
     --light-orange-gradient: rgba(254, 234, 211, 0.6);
     --beetroot: #7f0d0d;
+    --light-beetroot: #9a0e0e;
     --light-green-gradient: rgba(220,239,210, 0.6);
     --box-shadow:  0 0 20px rgba(0, 0, 0, 0.1);
 
@@ -85,7 +86,7 @@ h1{
  }
 
  .slideshow-btn:hover{
-    background-color: #9a0e0e;
+    background-color: var(--light-beetroot);
  }
 
  /* Refers to the effect of the order button (not in the slider 
@@ -133,7 +134,7 @@ h1{
   }
 
   .icon{
-    width: 30px;
+    width: 20px;
     padding: 0.5em;
   }
  
@@ -208,53 +209,6 @@ h1{
 
   .gallery img{object-fit: cover;}
 
-  .contact-section {
-display: flex;
-align-items: center;
-justify-content: center;
- }
-
-
-  
-  .contact-form {
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    
-    
-  }
-  
-
-
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  textarea {
-    height: 120px;
-    resize: vertical;
-  }
-
-  .submit-btn{
-    background-color: var(--beetroot);
-    color: white;
-    padding: 0.5em;
-    border: none;
-    border-radius: 5px;
-  }
-
-  .submit-btn:hover{
-    transform: scale(0.9);
-    background-color: #9a0e0e;;
-  }
-
 .contact p:hover{
     color: var(--beetroot);
 }
@@ -268,3 +222,23 @@ justify-content: center;
   }
 
  
+
+
+ .tally{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-orange-gradient);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+ 
+  box-shadow: var(--box-shadow);
+  
+ }
+ 
+  
+ @media screen and (max-width: 740px) {
+  iframe {
+    width: 100%;
+  }}
