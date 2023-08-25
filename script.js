@@ -28,5 +28,3 @@ $('.accordion__item-label').on('click', function() {
     $(this).addClass('blue');
     $(this).parent('.accordion__item').siblings().find('.accordion__item-label').removeClass('blue');
   });
-
-  
